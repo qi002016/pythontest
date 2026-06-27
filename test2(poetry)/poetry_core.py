@@ -94,7 +94,7 @@ class PoetryCrawler:
             print("[✗] 未解析到任何诗文数据，请检查网站结构或网络")
             return
         self.save_to_file(poem_data)
-        print(f"✅ 采集完毕，本次共获取{len(poem_data)}首诗文，保存路径：{self.save_path}")
+        print(f"采集完毕，本次共获取{len(poem_data)}首诗文，保存路径：{self.save_path}")
 
 if __name__ == "__main__":
     crawler = PoetryCrawler()
