@@ -45,12 +45,13 @@ class PoetryCrawler:
             })
         return result
 
-    def save_to_file(self, data):
-        with open(self.save_path, "w", encoding="utf-8") as f:
+    def save_to_file(self, data, append=False):
+        mode = "a" if append else "w"
+        with open(self.save_path, mode=mode, encoding="utf-8") as f:
             for poem in data:
                 f.write(f"标题：{poem['title']}\n")
                 f.write(f"作者：{poem['author']}\n")
-                f.write(f"正文：{poem['content']}\n")
+                f.write(f"正文：\n{poem['content']}\n")
                 f.write("-" * 40 + "\n")
 
     def run(self):
