@@ -12,7 +12,9 @@ from urllib.parse import urljoin
 class RegexCrawler:
     """基于正则表达式的通用信息爬虫"""
 
-    def __init__(self, url, save_dir=r"D:\实践\爬取信息"):
+    def __init__(self, url, save_dir=None):
+        if save_dir is None:
+            save_dir = os.path.join(os.path.dirname(__file__), "output")
         self.url = url
         self.save_dir = save_dir
         self.headers = {
