@@ -33,7 +33,7 @@ class PoetryCrawler:
             print("页面返回片段：", resp.text[:500])
             return resp.text
         except requests.exceptions.RequestException as e:
-            print(f"[✗] 请求失败 {target_url}: {e}")
+            print(f"请求失败 {target_url}: {e}")
             return None
 
     def parse_data(self, html):
