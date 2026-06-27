@@ -87,7 +87,7 @@ class PoetryCrawler:
     def run(self):
         html = self.get_html()
         if not html:
-            print("[✗] 未获取到页面内容，爬取终止")
+            print("未获取到页面内容，爬取终止")
             return
         poem_data = self.parse_data(html)
         if len(poem_data) == 0:
