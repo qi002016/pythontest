@@ -1,7 +1,7 @@
-from douban_core import DoubanMovieCrawler
+from douban_core import DoubanTop250Crawler
 
 def main():
-    crawler = DoubanMovieCrawler()
+    crawler = DoubanTop250Crawler()
     crawler.run()
 
 if __name__ == "__main__":
